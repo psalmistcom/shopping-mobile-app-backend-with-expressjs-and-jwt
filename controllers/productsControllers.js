@@ -11,7 +11,7 @@ module.exports = {
     }
   },
 
-  getAllProduct: async (req, res) => {
+  getAllProducts: async (req, res) => {
     try {
       const products = await Product.find().sort({ createdAt: -1 });
       res.status(200).json(products);
